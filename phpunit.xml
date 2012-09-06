@@ -1,0 +1,15 @@
+<phpunit
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    stopOnFailure="true">
+    <php>
+        <includePath>lib</includePath>
+    </php>
+    <testsuites>
+        <testsuite>
+            <directory>./t</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
