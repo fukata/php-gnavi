@@ -1,16 +1,16 @@
 <?php
 
 require_once "PHPUnit/Autoload.php";
-require_once 'gnavi/Gnavi.php';
+require_once 'gnavi/GnaviRestSearchApi.php';
 
-class ParseTest extends PHPUnit_Framework_TestCase {
-    public $gnavi;
+class RestSearchApiParseTest extends PHPUnit_Framework_TestCase {
+    public $api;
 
     protected function setUp() {
-        $this->gnavi = new Gnavi();
+        $this->api = new GnaviRestSearchApi();
     }
 
-    public function testRestSearchAPIParseOne() {
+    public function testParseOne() {
         $expect = (object) array(
             'id' => 'g045600',
             'update_date' => '2012-08-09 22:34:38',
@@ -71,14 +71,14 @@ class ParseTest extends PHPUnit_Framework_TestCase {
         );
 
         $content = file_get_contents('./t/fixture/RestSearchAPI_one.xml');
-        $data = $this->gnavi->_parseRestSearchAPI($content);
+        $data = $this->api->_parse($content);
         $restaurant = $data->rest[0];
 
         $this->assertEquals($expect, $restaurant);
     }
 
-    public function testRestSearchAPIParseMulti() {
+    public function testParseMulti() {
         $content = file_get_contents('./t/fixture/RestSearchAPI_multi.xml');
-        $data = $this->gnavi->_parseRestSearchAPI($content);
+        $data = $this->api->_parse($content);
     }
 }
