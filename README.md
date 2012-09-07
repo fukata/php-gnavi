@@ -34,6 +34,12 @@
 
 Registration [here](http://api.gnavi.co.jp/api/use.htm).
 
+# ChangeLog
+
+## v0.0.1 Fri Sep  7 14:54:55 JST 2012
+
+- 初回リリース 
+
 # Licence
 
 Apache Licence 2.0
