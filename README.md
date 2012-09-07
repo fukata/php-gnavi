@@ -3,12 +3,13 @@
 # How to
 
     require_once 'gnavi/Gnavi.php';
+    
     $apikey = 'Your API KEY';
     $query = array(
         'name' => 'ワイン',
     );
     $gnavi = new Gnavi($apikey);
-    $gnavi->doRestSearchApi($query);
+    $data = $gnavi->doRestSearchApi($query);
 
 # API KEY
 
