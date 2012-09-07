@@ -36,8 +36,9 @@ class GnaviRestSearchApi extends GnaviApi {
         }
 
         $data = (object) array(
-            'total_hit_count' => $xml->total_hit_count,
-            'hit_per_page' => $xml->hit_per_page,
+            'total_hit_count' => (string)$xml->total_hit_count,
+            'hit_per_page' => (string)$xml->hit_per_page,
+            'page_offset' => (string)$xml->page_offset,
             'rest' => array(),
         );
         if ( ! isset( $xml->rest[0] ) ) {
