@@ -24,10 +24,10 @@ class GnaviAreaSearchApi extends GnaviApi {
             'area' => array(),
         );
 
-        foreach ( $xml->area as $area ) {
+        foreach ( $xml->area as $r ) {
             $d = new stdClass;
             foreach ( self::$COPY_FIELDS as $f ) {
-                $d->$f = $area->$f;
+                $d->$f = $r->$f;
             }
             $data->area[] = $d;
         }
