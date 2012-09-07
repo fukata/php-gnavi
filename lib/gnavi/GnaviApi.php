@@ -18,12 +18,10 @@ class GnaviApi {
         return $data;
     }
 
-    protected function _doGet($uri, $query=null) {
-        $url = self::API_BASE . $uri;
-        if ($query) {
-            $qs = http_build_query($query);
-            $url = self::API_BASE . "$uri?$qs";
-        }
+    protected function _doGet($uri, $query=array()) {
+        $query['keyid'] = $this->apikey;
+        $qs = http_build_query($query);
+        $url = self::API_BASE . "$uri?$qs";
         $content = file_get_contents($url);
         return $content;
     }
