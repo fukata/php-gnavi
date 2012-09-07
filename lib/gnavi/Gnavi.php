@@ -18,24 +18,24 @@ class Gnavi {
         return $api->execute($query);
     }
 
-    public function doAreaSearchApi($query=array()) {
+    public function doAreaSearchApi() {
         $api = new GnaviAreaSearchApi($this->apikey);
-        return $api->execute($query);
+        return $api->execute();
     }
 
-    public function doPrefSearchApi($query=array()) {
+    public function doPrefSearchApi()) {
         $api = new GnaviPrefSearchApi($this->apikey);
-        return $api->execute($query);
+        return $api->execute();
     }
 
-    public function doCategoryLargeSearchApi($query=array()) {
+    public function doCategoryLargeSearchApi() {
         $api = new GnaviCategoryLargeSearchApi($this->apikey);
-        return $api->execute($query);
+        return $api->execute();
     }
 
-    public function doCategorySmallSearchApi($query=array()) {
+    public function doCategorySmallSearchApi() {
         $api = new GnaviCategorySmallSearchApi($this->apikey);
-        return $api->execute($query);
+        return $api->execute();
     }
 
 }
