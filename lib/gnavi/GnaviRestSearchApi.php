@@ -3,7 +3,7 @@ require_once __DIR__ . '/GnaviApi.php';
 
 class GnaviRestSearchApi extends GnaviApi {
 
-    private static $COPY_REST_FIELDS = array(
+    private static $COPY_FIELDS = array(
         'id',
         'update_date',
         'name',
@@ -23,8 +23,7 @@ class GnaviRestSearchApi extends GnaviApi {
     );
 
     public function execute($query=array()) {
-        $qs = http_build_query($query);
-        $content = file_get_contents(self::API_BASE . "/RestSearchAPI/?$qs");
+        $content = $this->_doGet("/RestSearchAPI/", $query);
         $xml = $this->_parse($content);
         return $xml;
     }
@@ -47,7 +46,7 @@ class GnaviRestSearchApi extends GnaviApi {
 
         foreach ( $xml->rest as $r ) {
             $rest = new stdClass;
-            foreach ( self::$COPY_REST_FIELDS as $k ) {
+            foreach ( self::$COPY_FIELDS as $k ) {
                 $rest->$k = (string)$r->$k;
             }
 

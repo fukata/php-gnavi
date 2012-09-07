@@ -17,4 +17,10 @@ class GnaviApi {
         );
         return $data;
     }
+
+    protected function _doGet($uri, $query) {
+        $qs = http_build_query($query);
+        $content = file_get_contents(self::API_BASE . "$uri?$qs");
+        return $content;
+    }
 }
