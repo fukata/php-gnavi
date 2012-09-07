@@ -217,4 +217,15 @@ class RestSearchApiParseTest extends PHPUnit_Framework_TestCase {
 
         $this->assertEquals($expect, $data);
     }
+
+    public function testParseFailed() {
+        $expect = (object) array(
+            'error' => (object) array( 'code' => '600' ),
+        );
+
+        $content = file_get_contents('./t/fixture/RestSearchAPI_failed.xml');
+        $data = $this->api->_parse($content);
+
+        $this->assertEquals($expect, $data);
+    }
 }

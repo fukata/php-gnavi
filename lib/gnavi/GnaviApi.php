@@ -10,6 +10,11 @@ class GnaviApi {
     }
 
     protected function _parseErrorObject($xml) {
-        //FIXME エラー処理
+        $data = (object) array(
+            'error' => (object) array(
+                'code' => (string)$xml->error->code,
+            ),
+        );
+        return $data;
     }
 }
