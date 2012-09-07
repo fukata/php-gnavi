@@ -23,7 +23,7 @@ class Gnavi {
         return $api->execute();
     }
 
-    public function doPrefSearchApi()) {
+    public function doPrefSearchApi() {
         $api = new GnaviPrefSearchApi($this->apikey);
         return $api->execute();
     }
