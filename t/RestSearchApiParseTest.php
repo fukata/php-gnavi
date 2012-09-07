@@ -52,11 +52,11 @@ class RestSearchApiParseTest extends PHPUnit_Framework_TestCase {
                 'areaname' => '関東',
                 'prefcode' => 'PREF13',
                 'prefname' => '東京都',
-                'categories_l' => array(
+                'category_l' => array(
                     (object) array( 'code' => 'CTG200', 'name' => '洋食', ),
                     (object) array( 'code' => 'CTG620', 'name' => '洋風居酒屋', ),
                 ),
-                'categories_s' => array(
+                'category_s' => array(
                     (object) array( 'code' => 'CTG202', 'name' => 'イタリア料理', ),
                     (object) array( 'code' => 'CTG621', 'name' => '洋風居酒屋', ),
                 ),
@@ -134,11 +134,11 @@ class RestSearchApiParseTest extends PHPUnit_Framework_TestCase {
                         'areaname' => '関東',
                         'prefcode' => 'PREF13',
                         'prefname' => '東京都',
-                        'categories_l' => array(
+                        'category_l' => array(
                             (object) array( 'code' => 'CTG610', 'name' => '和風居酒屋', ),
                             (object) array( 'code' => 'CTG640', 'name' => 'ダイニングバー・ビアレストラン', ),
                         ),
-                        'categories_s' => array(
+                        'category_s' => array(
                             (object) array( 'code' => 'CTG611', 'name' => '和風居酒屋', ),
                             (object) array( 'code' => 'CTG643', 'name' => 'ビアレストラン', ),
                         ),
@@ -192,11 +192,11 @@ class RestSearchApiParseTest extends PHPUnit_Framework_TestCase {
                         'areaname' => '関東',
                         'prefcode' => 'PREF13',
                         'prefname' => '東京都',
-                        'categories_l' => array(
+                        'category_l' => array(
                             (object) array( 'code' => 'CTG620', 'name' => '洋風居酒屋', ),
                             (object) array( 'code' => 'CTG650', 'name' => 'バー・パブ', ),
                         ),
-                        'categories_s' => array(
+                        'category_s' => array(
                             (object) array( 'code' => 'CTG621', 'name' => '洋風居酒屋', ),
                             (object) array( 'code' => 'CTG654', 'name' => 'ワインバー', ),
                         ),

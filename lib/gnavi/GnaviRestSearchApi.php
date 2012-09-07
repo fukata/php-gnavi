@@ -84,7 +84,7 @@ class GnaviRestSearchApi extends GnaviApi {
             foreach ( array('l', 's') as $k ) {
                 $key_code = "category_code_$k";
                 $key_name = "category_name_$k";
-                $key_categories = "categories_$k";
+                $key_categories = "category_$k";
 
                 $codes = array();
                 $names = array();
