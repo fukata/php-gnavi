@@ -8,8 +8,8 @@ class GnaviCategoryLargeSearchApi extends GnaviApi {
         'category_l_name',
     );
 
-    public function execute($query=array()) {
-        $content = $this->_doGet("/CategoryLargeSearchAPI/", $query);
+    public function execute() {
+        $content = $this->_doGet("/CategoryLargeSearchAPI/");
         $xml = $this->_parse($content);
         return $xml;
     }

@@ -8,8 +8,8 @@ class GnaviAreaSearchApi extends GnaviApi {
         'area_name',
     );
 
-    public function execute($query=array()) {
-        $content = $this->_doGet("/AreaSearchAPI/", $query);
+    public function execute() {
+        $content = $this->_doGet("/AreaSearchAPI/");
         $xml = $this->_parse($content);
         return $xml;
     }
