@@ -1,4 +1,4 @@
-# client for gnavi
+# Client for gnavi
 
 # How to
 
