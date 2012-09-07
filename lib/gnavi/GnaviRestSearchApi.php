@@ -24,8 +24,8 @@ class GnaviRestSearchApi extends GnaviApi {
 
     public function execute($query=array()) {
         $content = $this->_doGet("/RestSearchAPI/", $query);
-        $xml = $this->_parse($content);
-        return $xml;
+        $data = $this->_parse($content);
+        return $data;
     }
 
     public function _parse($content) {
