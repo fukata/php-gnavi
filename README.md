@@ -36,6 +36,12 @@ Registration [here](http://api.gnavi.co.jp/api/use.htm).
 
 ## ChangeLog
 
+### v0.0.2 Mon Sep 10 23:37:34 JST 2012
+- 下記項目についてstringではなく、intでキャストするように修正
+ - total_hit_count 
+ - hit_per_page 
+ - page_offset 
+
 ### v0.0.1 Fri Sep  7 14:54:55 JST 2012
 
 - 初回リリース 
